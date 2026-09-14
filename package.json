@@ -12,6 +12,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines": {
+  "node": "22.22.0"
+},
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
