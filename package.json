@@ -1,0 +1,23 @@
+{
+  "name": "formulario-contacto-la-salle",
+  "version": "1.0.0",
+  "description": "Formulario de contacto de la Universidad de La Salle",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "testing": "set APP_ENV=testing&& nodemon src/server.js",
+    "test": "echo \"Pruebas manuales de la aplicación\""
+},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1" 
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

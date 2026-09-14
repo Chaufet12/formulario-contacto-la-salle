@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario de Contacto | Universidad de La Salle</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">LA SALLE</div>
+
+            <div>
+                <h1>Universidad de La Salle</h1>
+                <p>Formulario de contacto</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="contact-card">
+
+            <div class="intro">
+                <span class="tag">CONTACTO</span>
+
+                <h2>¿Cómo podemos ayudarte?</h2>
+
+                <p>
+                    Completa el siguiente formulario y nuestro equipo
+                    podrá recibir y gestionar tu solicitud.
+                </p>
+            </div>
+
+            <form id="contactForm">
+
+                <div class="form-group">
+                    <label for="nombre">Nombre completo</label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ingresa tu nombre completo"
+                        required
+                    >
+
+                    <small class="error" id="errorNombre"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        required
+                    >
+
+                    <small class="error" id="errorCorreo"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+
+                    <input
+                        type="text"
+                        id="asunto"
+                        name="asunto"
+                        placeholder="¿Cuál es el motivo de tu mensaje?"
+                        required
+                    >
+
+                    <small class="error" id="errorAsunto"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="6"
+                        placeholder="Escribe tu mensaje..."
+                        required
+                    ></textarea>
+
+                    <small class="error" id="errorMensaje"></small>
+                </div>
+
+                <button type="submit" id="submitButton">
+                    Enviar mensaje
+                </button>
+
+                <div id="formMessage" class="form-message"></div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>
+            Formulario de Contacto La Salle |
+            Proyecto académico
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
