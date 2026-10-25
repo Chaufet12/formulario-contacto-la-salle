@@ -19,7 +19,7 @@ function backend(body, mode='ok') {
 }
 function frontend(values) {
  const nodes={}; const ids=['contactForm','submitButton','formMessage','nombre','correo','asunto','mensaje','errorNombre','errorCorreo','errorAsunto','errorMensaje'];
- for(const id of ids) nodes[id]={value:values[id]||'',textContent:'',className:'',disabled:false,validity:{valid:id!=='correo'||/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(values.correo||'')},addEventListener(event,fn){this.handler=fn},reset(){this.resetCalled=true}};
+ for(const id of ids) nodes[id]={value:values[id]||'',textContent:'',className:'',disabled:false,validity:{valid:id!=='correo'||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.correo||'')},addEventListener(event,fn){this.handler=fn},reset(){this.resetCalled=true}};
  const document={getElementById:id=>nodes[id]}; let fetchCalls=0;
  vm.runInNewContext(front,{document,fetch:async()=>{fetchCalls++;return {ok:true,json:async()=>({message:'¡Mensaje enviado correctamente!'})}}});
  return {nodes,submit:async()=>{await nodes.contactForm.handler({preventDefault(){}});return fetchCalls}};
